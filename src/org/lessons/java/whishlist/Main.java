@@ -9,6 +9,7 @@ public class Main {
         ArrayList<String> presentArrayList = new ArrayList<>();
 
         boolean stop= false;
+
         while (!stop){
             System.out.println("il nome del regalo: ");
             String present= scanner.nextLine();
@@ -24,20 +25,21 @@ public class Main {
             if (userResponse.equalsIgnoreCase("n")) {
                 stop= true;
             }else if (!userResponse.equalsIgnoreCase("y") || userResponse.isBlank()) {
-
-                System.out.println("non hai inserito né y né n. Riproviamo.\nVuoi inserire un altro regalo?");
-                String userResponse1= scanner.nextLine();
-
-                if (userResponse1.equalsIgnoreCase("n")){
-                    stop=true;
-
-                }else if (!userResponse1.equalsIgnoreCase("y")|| userResponse1.isBlank()) {
-                    System.out.println("Di nuovo? Basta\nFine programma");
-                    stop=true;
-
+                boolean validResponse=false;
+                while(!validResponse){
+                    System.out.println("non hai inserito né y né n. Riproviamo.\nVuoi inserire un altro regalo?");
+                    String userResponse1= scanner.nextLine();
+                    if (userResponse1.equalsIgnoreCase("n")){
+                        stop=true;
+                        validResponse=true;
+                    } else if (userResponse1.equalsIgnoreCase("y")) {
+                        validResponse=true;
+                    } else if (!userResponse1.equalsIgnoreCase("y")|| userResponse1.isBlank()) {
+                        System.out.println("Di nuovo? Bastaaaa");
+                    }
                 }
-            }
 
+            }
 
             System.out.println("la tua lista è composta da "+ presentArrayList.size() +" elementi, ed è la seguente:\n"+ presentArrayList);
 
