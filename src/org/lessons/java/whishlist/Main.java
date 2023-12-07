@@ -1,12 +1,14 @@
 package org.lessons.java.whishlist;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws NullPointerException, IllegalArgumentException {
         Scanner scanner= new Scanner(System.in);
-        ArrayList<String> presentArrayList = new ArrayList<>();
+        Set<String> presentArrayList = new HashSet<>();
 
         boolean stop= false;
 
