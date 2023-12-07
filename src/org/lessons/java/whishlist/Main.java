@@ -23,7 +23,6 @@ public class Main {
                 System.out.println("non hai inserito nulla. Riprova");
             }
 
-            boolean askedOnce=false;
             System.out.println("vuoi aggiungere altri regali? (y/n)");
             String userResponse= scanner.nextLine();
             try{
